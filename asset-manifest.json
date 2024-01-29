@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Bfit365/static/css/main.ef93e576.css",
-    "main.js": "/Bfit365/static/js/main.bef2d4ad.js",
+    "main.css": "/Bfit365/static/css/main.6f71b830.css",
+    "main.js": "/Bfit365/static/js/main.10e2f90a.js",
     "static/media/full-body-portrait-athletic-shirtless-male-doing-biceps-workouts-with-dumbbells-gym-club.jpg": "/Bfit365/static/media/full-body-portrait-athletic-shirtless-male-doing-biceps-workouts-with-dumbbells-gym-club.5bcfafdf7e15ffa72418.jpg",
     "static/media/background.jpg": "/Bfit365/static/media/background.b15427cc677e584ca1ba.jpg",
     "static/media/pexels-the-lazy-artist-gallery-2247179.jpg": "/Bfit365/static/media/pexels-the-lazy-artist-gallery-2247179.1056394cc13eeeb5cdfe.jpg",
@@ -9,11 +9,11 @@
     "static/media/pexels-cleiton-silva-10343485.jpg": "/Bfit365/static/media/pexels-cleiton-silva-10343485.96f7e62a7e62c4e6456e.jpg",
     "static/media/pexels-william-choquette-1954524.jpg": "/Bfit365/static/media/pexels-william-choquette-1954524.b949a05d0ccdc87751d5.jpg",
     "index.html": "/Bfit365/index.html",
-    "main.ef93e576.css.map": "/Bfit365/static/css/main.ef93e576.css.map",
-    "main.bef2d4ad.js.map": "/Bfit365/static/js/main.bef2d4ad.js.map"
+    "main.6f71b830.css.map": "/Bfit365/static/css/main.6f71b830.css.map",
+    "main.10e2f90a.js.map": "/Bfit365/static/js/main.10e2f90a.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef93e576.css",
-    "static/js/main.bef2d4ad.js"
+    "static/css/main.6f71b830.css",
+    "static/js/main.10e2f90a.js"
   ]
 }
