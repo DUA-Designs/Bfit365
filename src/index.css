@@ -5,6 +5,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: all 0.3s;
+  
 }
 
 code {
@@ -20,6 +21,7 @@ code {
  
  
   overflow-x: hidden;
+ 
 }
  ::-webkit-scrollbar{
   width: 0.5rem;
@@ -188,6 +190,22 @@ nav{
 #btn-back-to-top:hover{
   background-color: #ff7300;
 }
+#message{
+  right: 10%;
+  height: fit-content;
+ 
+
+}
+#parallaxEffect{
+}
+#message input{
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid white;
+  padding: 1rem;
+  color: white;
+
+}
 
 @media screen and  (max-width:760px) {
   #studioContainer{
@@ -232,6 +250,11 @@ nav{
     font-size: 1rem;
 }
 
+#message{
+  right: 0;
+  height: fit-content;
  
+
+}
   
 }

@@ -5,6 +5,8 @@ import facility2 from './images/pexels-the-lazy-artist-gallery-2247179.jpg';
 import facility3 from './images/pexels-william-choquette-1954524.jpg';
 import facility4 from './images/pexels-cleiton-silva-10343485.jpg';
 import fitnessMan from './images/full-body-portrait-athletic-shirtless-male-doing-biceps-workouts-with-dumbbells-gym-club.jpg';
+import DUA from './images/IMG_2570.jpeg';
+
 let x=1;
 function App() {
 
@@ -151,6 +153,35 @@ function App() {
                  
 
                </main>
+
+                <section className='container-fluid my-5 '>
+                  <div className='row text-center my-5 py-3'>
+                    <h1>Hit Us Up Anytime</h1>
+                  </div>
+                  <div className='row position-relative'>
+                    <div className='col-lg-8 col-md-8 col-sm-12 col-xs-12' id='parallaxEffect'><img src={DUA} className='img-fluid' alt='DUA'></img></div>
+                    <div className='col-lg-6 col-md-8 col-sm-12 col-xs-12 bg-dark text-center text-white position-absolute p-3  bottom-0' id='message'>
+                       <h2 className='p-4 'style={{color:"#ff7300",fontWeight:700}}>Send A Message</h2>
+                       <div className='row mx-auto d-flex flex-wrap text-start '>
+                        <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12  my-2 '><div className='col-12 p-2 d-grid'><label>FirstName</label>
+                         <input type='text' ></input></div>
+                        </div>
+                        <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12  my-2 '><div className='col-12 p-2 d-grid'><label>LastName</label>
+                         <input type='text' ></input></div></div>
+                        <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12  my-2 '><div className='col-12 p-2 d-grid'><label>Phone Number</label>
+                         <input type='text' ></input></div></div>
+                        <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12  my-2 '><div className='col-12 p-2 d-grid'><label>Email</label> 
+                         <input type='text' ></input></div></div>
+                        <div className='col-12  my-2 '><div className='col-12 p-2 d-grid'><label>Leave a message...</label>
+                         <input type='text' ></input></div></div>
+                        <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12 mx-auto d-grid my-2  d-grid'><div className='col-12 d-grid'><button className='btn btn-dark border-light'>Submit</button></div>
+                        </div></div>
+                    </div>
+                  </div>
+                
+
+                </section>
+
                <aside className='row p-3 my-2' id='area'>
                  <div className='col-lg-9 col-md-8 col-sm-12 col-xs-12 my-2'><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.254938191809!2d78.50558127368959!3d17.399548902457603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99bb24f7ded9%3A0xb6886ea32ec7f661!2sB-FIT365%20FITTNESS%20STUDIO!5e0!3m2!1sen!2sin!4v1706455960836!5m2!1sen!2sin"  title='Bfit365_Location'    allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe></div>
                   <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 shadow rounded my-2'>
