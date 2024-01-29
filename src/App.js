@@ -40,15 +40,15 @@ function App() {
             if(document.documentElement.scrollTop > 20){
               nav.classList.add("scrollStyle");
             }
-            if(document.documentElement.scrollTop>document.getElementById("sec1").offsetHeight-150){
+            if(document.documentElement.scrollTop>document.getElementById("sec1").offsetHeight-220){
               document.getElementById('erin').classList.add("showIt");
               document.getElementById('gray').classList.add("showIt");
               
             }
-            if(document.documentElement.scrollTop>document.getElementById("sec1").offsetHeight-50){
+            if(document.documentElement.scrollTop>document.getElementById("sec1").offsetHeight-90){
               document.getElementById('welcome').classList.add("showIt");
             }
-            if(document.documentElement.scrollTop>document.getElementById("sec1").offsetHeight+document.getElementById("regular").offsetHeight-150){
+            if(document.documentElement.scrollTop>document.getElementById("sec1").offsetHeight+document.getElementById("regular").offsetHeight-250){
               document.getElementById('womenBack').classList.add("slideMe");
               document.getElementById('results').classList.add("slideMe");
               setTimeout(()=>{
@@ -79,7 +79,7 @@ function App() {
 
   });
   return (
-        <div  id="mother" className='container-fluid' >
+        <div  id="mother"   >
                <nav className="d-flex  p-2 align-items-center " id='nav'>
                          < div className="col-2  text-start"><button className="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i className="fa-solid fa-bars fs-4"></i></button></div>
 
@@ -92,10 +92,11 @@ function App() {
                               <p>Try scrolling the rest of the page to see this option in action.</p>
                             </div>
                             </div>
-                            <div className="col-10  text-white  "  id='nameContainer'> <span className='gymName'> Bfit365</span>  <span  className='studio'>Fitness</span><span className='studio'> Studio</span> <i className="fa-solid fa-dumbbell fs-4"></i></div>
+                            <div className="col-10  text-white  d-flex flex-wrap "  id='nameContainer'> <span className='col-lg-6 col-md-6 col-sm-12 ' id='gymNameContainer'><span className='gymName '> Bfit365</span></span><span className='col-lg-6 col-md-6 col-sm-12' id='studioContainer'>  <span  className='studio  '>Fitness</span><span className='studio  '> Studio</span> <i className="fa-solid fa-dumbbell fs-4 "></i></span></div>
                   
                </nav>
                <main  >
+              
                  <section className="row position-relative " id='sec1'>
                   <div className="col-12 position-absolute start-0 banner text-center   text-white   ">
                     <h1 id="trainHard">Train Hard. Sweat Hard.</h1>
@@ -106,7 +107,7 @@ function App() {
                  <div className="col-12 "><img src={background} className="img-fluid " alt="banner_image"></img></div>
                   
                  </section>
-
+                 <h1 className='p-4 text-center'>About Us</h1>
                  <section className='row text-center   position-relative my-5 py-5' id='regular'>
                  <div className='col-6 position-absolute  styleSection  mobileStyle'> </div>
                   <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12   my-3 '>
@@ -181,8 +182,8 @@ function App() {
                     <p  >3 rd floor, vertex complex, temple, above Nandini tiffins, opp. Shankerrmatt temple, New Nallakunta, Hyderabad, Telangana 500044</p></div>
                     <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 text-center mx-auto my-2'><h4>Opening Hours</h4>
                     <ul>
-                      <li>Mon-Sat: 5AM to 10PM</li>
-                      <li>Sun: 6AM to 1PM</li>
+                      <li>Mon-Sat : 5AM to 10PM</li>
+                      <li>Sun : 6AM to 1PM</li>
                       </ul>
                       <div className='row '>
                      <div className='col-3'><i className="fa-brands fa-facebook-f fs-5"></i></div>

@@ -190,6 +190,12 @@ nav{
 }
 
 @media screen and  (max-width:760px) {
+  #studioContainer{
+    width: 100%;
+  }
+  #gymNameContainer{
+    width: 100%;
+  }
    
   #trainHard{
     font-size: 40px;
@@ -226,10 +232,6 @@ nav{
     font-size: 1rem;
 }
 
-nav{
-  
-   
-   text-align: start;
-}
+ 
   
 }
