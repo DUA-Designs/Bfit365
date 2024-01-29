@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@300&family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 body {
   margin: 0;
-  font-family: "Anek Kannada", sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: all 0.3s;
@@ -18,56 +18,86 @@ code {
 }
 #mother{
  
-  height: 100vh;
+ 
   overflow-x: hidden;
 }
-#mother::-webkit-scrollbar{
+ ::-webkit-scrollbar{
   width: 0.5rem;
    
   background:transparent;
 }
-#mother::-webkit-scrollbar-track{
  
- 
-}
-#mother::-webkit-scrollbar-thumb{
+ ::-webkit-scrollbar-thumb{
   background: #713402;
   border-radius: 10px;
   
   
 }
 .gymName{
-  font-size: 50px;
+  font-size: 25px;
   color: white;
   padding: 0 1rem;
   border: 5px solid white;
 }
+nav.scrollStyle{
+ background-color: rgb(61, 61, 61);
+ padding: 0.2rem;
+ border-bottom: 1px solid ;
+}
 nav{
-  background: #ff7300;
+ 
+ width: 100%;
+  position: fixed;
+ 
+ 
   text-align: center;
-  z-index: 99;
+  z-index: 3;
+  text-wrap: nowrap;
    
 }
+ 
 .studio{
   font-size: 24px;
 }
-
+ 
 #trainHard{
   font-size: 100px;
   letter-spacing: 2px;
   font-weight: 700;
+  transform: translateX(-100%);
+ 
+}
+#trainHard.slideRight{
+  transform: translateX(0);
+  transition: 1s ease-in-out;
 
 }
+ 
+ 
 #member{
   border: 1px solid white;
   background : #ff7300;
   color: white;
   border-radius: 0px;
+  transform: translateY(30px);
+  opacity: 0;
 }
+#member.showIt{
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.8s ease;
+
+}
+ 
+ 
+
 #member:hover{
   background:white;
   color: black;
  
+}
+.banner{
+  top:30%;
 }
 .styleSection{
   background-color:#ff7300 ;
@@ -78,6 +108,40 @@ nav{
  top: 0;
  right: 0;
 }
+.hideIt{
+  opacity: 0;
+  transform: translateY(30px);
+}
+.showIt{
+ 
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.8s ease;
+}
+.slideMe{
+  transform: translateX(0);
+  transition: 0.8s ease;
+
+}
+.pushLeft{
+  transform: translateX(-120%);
+
+}
+.pushRight{
+  transform: translateX(120%);
+}
+
+#womenBack.slideMe{
+  transform: translateX(0);
+  transition: 0.8s ease;
+}
+#results.slideMe{
+  transform: translateX(0);
+  transition: 0.8s ease;
+}
+ 
+ 
+ 
 
   ul{
   list-style-type: none;
@@ -107,26 +171,35 @@ nav{
 }
 
 #btn-back-to-top {
-  background-color: rgb(222, 154, 66);
-position: fixed;
-bottom: 20px;
-right: 20px;
-display: none;
+  background-color:#262626;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+ text-align: center;
+ display: none;
+ align-items: center;
+ justify-content: center;
+ padding: 1rem;
+ color:white;
+ border: 2px solid white;
+ 
+
+}
+#btn-back-to-top:hover{
+  background-color: #ff7300;
 }
 
 @media screen and  (max-width:760px) {
-  #nameContainer{
-    text-align: end;
- 
-  }
+   
   #trainHard{
     font-size: 40px;
     letter-spacing: 2px;
     font-weight: 600;
   
   }
+
   .mobileStyle{
-    height: 27%;
+    height: 20%;
     top: inherit;
  right: inherit;
     bottom:24%;
@@ -151,6 +224,12 @@ display: none;
 }
 #btn-back-to-top i{
     font-size: 1rem;
+}
+
+nav{
+  
+   
+   text-align: start;
 }
   
 }
