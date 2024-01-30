@@ -124,7 +124,7 @@ function App() {
                     </div>
                  </section>
                  
-                 <section className='d-flex flex-wrap  my-3 py-5 px-2'>
+                 <section className='d-flex flex-wrap  my-3   px-2'>
                   <div className='col-lg-8 col-md-8 col-sm-12 col-xs-12 position-relative '>
                   <div className='col-6 position-absolute top-0 start-0 styleSection pushLeft ' id='womenBack'> </div>
                   
@@ -155,7 +155,7 @@ function App() {
 
                </main>
 
-                <section className='container-fluid my-5 py-5 px-2'>
+                <section className='container-fluid my-5 px-2'>
                   <div className='row text-center my-5 py-3'>
                     <h1>Hit Us Up Anytime</h1>
                   </div>
@@ -183,7 +183,7 @@ function App() {
 
                 </section>
 
-               <aside className='row   my-2 py-5 px-3' id='area'>
+               <aside className='row   my-2   px-3' id='area'>
                  <div className='col-lg-9 col-md-8 col-sm-12 col-xs-12 my-2'><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.254938191809!2d78.50558127368959!3d17.399548902457603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99bb24f7ded9%3A0xb6886ea32ec7f661!2sB-FIT365%20FITTNESS%20STUDIO!5e0!3m2!1sen!2sin!4v1706455960836!5m2!1sen!2sin"  title='Bfit365_Location'    allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe></div>
                   <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 shadow rounded my-2'>
 
@@ -198,7 +198,7 @@ function App() {
                </aside>
 
                <footer >
-                <section  className=' text-white py-5 px-2' style={{background:'#262626'}} id='list'>
+                <section  className=' text-white   px-2' style={{background:'#262626'}} id='list'>
                   <div className='row p-3'>
                     <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 text-center mx-auto my-2'><span className='gymName'> Bfit365</span>
                      <p style={{color:"#ff7300"}} className='p-3'>Fitness Studio</p>
