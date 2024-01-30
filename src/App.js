@@ -55,8 +55,9 @@ function App() {
               document.getElementById('results').classList.add("slideMe");
               setTimeout(()=>{
                 document.getElementById('womenImage').classList.add("showIt");
-              },1000);
+              },500);
             }
+          
           } else {
             mybutton.style.display = "none";
             nav.classList.remove("scrollStyle");
@@ -110,7 +111,7 @@ function App() {
                   
                  </section>
                  <h1 className='p-4 text-center'>About Us</h1>
-                 <section className='row text-center   position-relative my-5 py-5' id='regular'>
+                 <section className='row text-center   position-relative my-5 py-5 px-2' id='regular'>
                  <div className='col-6 position-absolute  styleSection  mobileStyle'> </div>
                   <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12   my-3 '>
                     <p className='fs-2 hideIt' id='erin'>“Once you are exercising regularly, the hardest thing is to stop it.” </p>
@@ -123,7 +124,7 @@ function App() {
                     </div>
                  </section>
                  
-                 <section className='d-flex flex-wrap  my-3'>
+                 <section className='d-flex flex-wrap  my-3 py-5 px-2'>
                   <div className='col-lg-8 col-md-8 col-sm-12 col-xs-12 position-relative '>
                   <div className='col-6 position-absolute top-0 start-0 styleSection pushLeft ' id='womenBack'> </div>
                   
@@ -139,7 +140,7 @@ function App() {
                  </section>
 
                  <div className='col-12 text-center'><h1>Workout Facility</h1></div>
-                 <section className='row py-5 position-relative shadow rounded my-3'>
+                 <section className='row  position-relative  my-3 py-5 px-2' id='facility'>
                 
                  
                   
@@ -154,13 +155,13 @@ function App() {
 
                </main>
 
-                <section className='container-fluid my-5 '>
+                <section className='container-fluid my-5 py-5 px-2'>
                   <div className='row text-center my-5 py-3'>
                     <h1>Hit Us Up Anytime</h1>
                   </div>
-                  <div className='row position-relative'>
-                    <div className='col-lg-8 col-md-8 col-sm-12 col-xs-12' id='parallaxEffect'><img src={DUA} className='img-fluid' alt='DUA'></img></div>
-                    <div className='col-lg-6 col-md-8 col-sm-12 col-xs-12 bg-dark text-center text-white position-absolute p-3  bottom-0' id='message'>
+                  <div className='row p-4 '>
+                    <div className='col-lg-5 col-md-6 col-sm-12 col-xs-12 '  id='parallaxEffect'> </div>
+                    <div className='col-lg-7 col-md-8 col-sm-12 col-xs-12 mx-auto bg-dark text-center text-white position-relative p-3  bottom-0' id='message'>
                        <h2 className='p-4 'style={{color:"#ff7300",fontWeight:700}}>Send A Message</h2>
                        <div className='row mx-auto d-flex flex-wrap text-start '>
                         <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12  my-2 '><div className='col-12 p-2 d-grid'><label>FirstName</label>
@@ -182,7 +183,7 @@ function App() {
 
                 </section>
 
-               <aside className='row p-3 my-2' id='area'>
+               <aside className='row   my-2 py-5 px-3' id='area'>
                  <div className='col-lg-9 col-md-8 col-sm-12 col-xs-12 my-2'><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.254938191809!2d78.50558127368959!3d17.399548902457603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99bb24f7ded9%3A0xb6886ea32ec7f661!2sB-FIT365%20FITTNESS%20STUDIO!5e0!3m2!1sen!2sin!4v1706455960836!5m2!1sen!2sin"  title='Bfit365_Location'    allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe></div>
                   <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 shadow rounded my-2'>
 
@@ -197,11 +198,13 @@ function App() {
                </aside>
 
                <footer >
-                <section  className='py-5 text-white' style={{background:'#262626'}} id='list'>
+                <section  className=' text-white py-5 px-2' style={{background:'#262626'}} id='list'>
                   <div className='row p-3'>
-                    <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 text-center mx-auto my-2'><span className='gymName'> Bfit365</span></div>
+                    <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 text-center mx-auto my-2'><span className='gymName'> Bfit365</span>
+                     <p style={{color:"#ff7300"}} className='p-3'>Fitness Studio</p>
+                    </div>
                     <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 mx-auto my-2'>
-                      <h5 >Features</h5>
+                      <h4 >Features</h4>
                       <ul  >
                         <li>Become Member</li>
                         <li>About Us</li>
@@ -209,7 +212,7 @@ function App() {
                         <li>Contact</li>
                       </ul>
                     </div>
-                    <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 mx-auto my-2  '><h5>Location</h5>
+                    <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 mx-auto my-2  '><h4>Location</h4>
                     <p  >3 rd floor, vertex complex, temple, above Nandini tiffins, opp. Shankerrmatt temple, New Nallakunta, Hyderabad, Telangana 500044</p></div>
                     <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 text-center mx-auto my-2'><h4>Opening Hours</h4>
                     <ul>

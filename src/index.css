@@ -44,7 +44,7 @@ code {
 nav.scrollStyle{
  background-color: rgb(61, 61, 61);
  padding: 0.2rem;
- border-bottom: 1px solid ;
+ 
 }
 nav{
  
@@ -196,8 +196,16 @@ nav{
  
 
 }
+ 
 #parallaxEffect{
+  background: url('./images/IMG_2570.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:contain;
+ 
+   
 }
+ 
 #message input{
   border: none;
   background: transparent;
@@ -249,12 +257,19 @@ nav{
 #btn-back-to-top i{
     font-size: 1rem;
 }
-
 #message{
   right: 0;
-  height: fit-content;
+ 
  
 
 }
+nav {
+  background-color: rgb(61, 61, 61);
+  padding: 0.2rem;
+  
+ }
+ #sec1{
+  margin-top: 4rem;
+ }
   
 }
