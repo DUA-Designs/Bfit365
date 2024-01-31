@@ -28,6 +28,12 @@ function App() {
 
      x++;
     }
+    let nodeList=document.querySelectorAll('.closeDashboard');
+     for (let i=0;i<nodeList.length;i++){
+       nodeList[i].addEventListener("click",()=>{
+        document.getElementById("close").click();
+       });
+     }
 
 
 
@@ -102,13 +108,20 @@ function App() {
 
                             <div className="offcanvas offcanvas-start" data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
                             <div className="offcanvas-header">
-                              <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-                              <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                              <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">Features</h5>
+                              <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id='close'></button>
                             </div>
-                            <div className="offcanvas-body">
-                              <p>Try scrolling the rest of the page to see this option in action.</p>
+                            <div className="offcanvas-body" id='dashItems'>
+                              <ul>
+                                <li><a className='p-3 closeDashboard' href='#sec1'>Become member</a></li>
+                                <li><a className='p-3 closeDashboard' href='#about'>About Us</a></li>
+                                <li><a className='p-3 closeDashboard' href='#workFacility'>Facility</a></li>
+                                <li><a className='p-3 closeDashboard' href='#hitUsUp'>Contact Us</a></li>
+                                 
+                              </ul>
                             </div>
                             </div>
+
                             <div className="col-10  text-white  d-flex flex-wrap "  id='nameContainer'> <span className='col-lg-6 col-md-6 col-sm-12 ' id='gymNameContainer'><span className='gymName '> Bfit365</span></span><span className='col-lg-6 col-md-6 col-sm-12' id='studioContainer'>  <span  className='studio  '>Fitness</span><span className='studio  '> Studio</span> <i className="fa-solid fa-dumbbell fs-4 "></i></span></div>
                   
                </nav>
@@ -124,10 +137,10 @@ function App() {
                  <div className="col-12 "><img src={background} className="img-fluid " alt="banner_image" id='bannerImage'></img></div>
                   
                  </section>
-                 <h1 className='p-4 text-center'>About Us</h1>
+                 <h1 className='p-4 text-center' id='about'>About Us</h1>
                  <section className='container d-flex flex-wrap text-center   position-relative my-5   ' id='regular'>
                  <div className='col-6 position-absolute  styleSection  mobileStyle someOtherStyle p-2'> </div>
-                  <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12   my-3 '>
+                  <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12   my-3 p-2'>
                     <p className='fs-2 hideIt' id='erin'>“Once you are exercising regularly, the hardest thing is to stop it.” </p>
                     <p className='fs-2 hideIt text-end' id='gray'>- Erin Gray</p>
                     <p className='fs-5 hideIt' id='welcome'>Welcome to Bfit365, your ultimate destination for fitness and well-being! At Bfit, we believe that a healthy lifestyle is the key to unlocking your full potential. Whether you're a seasoned fitness enthusiast or just starting your wellness journey, our state-of-the-art facility and expert team are here to support you every step of the way. </p>
@@ -153,7 +166,7 @@ function App() {
                   
                  </section>
 
-                 <div className='col-12 text-center'><h1>Workout Facility</h1></div>
+                 <div className='col-12 text-center' id='workFacility'><h1>Workout Facility</h1></div>
                  <section className='row  position-relative  my-3 py-5 px-2' id='facility'>
                 
                  
@@ -169,7 +182,7 @@ function App() {
 
                </main>
 
-                <section className='container-fluid my-5 px-2'>
+                <section className='container-fluid my-5 px-2' id='hitUsUp'>
                   <div className='row text-center my-5 py-3'>
                     <h1>Hit Us Up Anytime</h1>
                   </div>
