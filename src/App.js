@@ -122,14 +122,14 @@ function App() {
                   
                  </section>
                  <h1 className='p-4 text-center'>About Us</h1>
-                 <section className='row text-center   position-relative my-5   px-2' id='regular'>
-                 <div className='col-6 position-absolute  styleSection  mobileStyle'> </div>
+                 <section className='container d-flex flex-wrap text-center   position-relative my-5   ' id='regular'>
+                 <div className='col-6 position-absolute  styleSection  mobileStyle p-2'> </div>
                   <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12   my-3 '>
                     <p className='fs-2 hideIt' id='erin'>“Once you are exercising regularly, the hardest thing is to stop it.” </p>
                     <p className='fs-2 hideIt text-end' id='gray'>- Erin Gray</p>
                     <p className='fs-5 hideIt' id='welcome'>Welcome to Bfit365, your ultimate destination for fitness and well-being! At Bfit, we believe that a healthy lifestyle is the key to unlocking your full potential. Whether you're a seasoned fitness enthusiast or just starting your wellness journey, our state-of-the-art facility and expert team are here to support you every step of the way. </p>
                   </div>
-                  <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12 p-4'><img src={fitnessMan} alt='fitness_man' className='img-fluid'></img></div>
+                  <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12 p-4 '><img src={fitnessMan} alt='fitness_man' className='img-fluid'></img></div>
                   <div className="col-lg-4 col-md-4 col-sm-10 col-xs-12 mx-auto my-3">
                       <button className="btn btn-dark border p-2">Start Sweating</button>
                     </div>
