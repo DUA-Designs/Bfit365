@@ -111,9 +111,7 @@ nav{
  right: 0;
 }
 
-.someOtherStyle{
-  height: 20%  !important;
-}
+ 
 
 .hideIt{
   opacity: 0;
@@ -258,6 +256,9 @@ nav{
     bottom:24%;
     width: 100%;
 
+  }
+  .someOtherStyle{
+    height: 15%;
   }
   #list{
     text-align: center;
