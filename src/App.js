@@ -13,14 +13,17 @@ function App() {
   useEffect(()=>{
    
     if(x===1){
-     setTimeout(()=>{
-      document.getElementById("trainHard").classList.add("slideRight");
-     },2000);
-     
-     setTimeout(()=>{
-     
-      document.getElementById("member").classList.add("showIt");
-     },3000);
+    if(document.getElementById("bannerImage")){
+      setTimeout(()=>{
+        document.getElementById("trainHard").classList.add("slideRight");
+      },2000);
+      
+      setTimeout(()=>{
+      
+       document.getElementById("member").classList.add("showIt");
+      },3000);
+    }
+ 
 
 
      x++;
@@ -118,7 +121,7 @@ function App() {
                       <button className=" btn   p-2 my-2" id='member'>Become a member</button>
                     </div>
                   </div>
-                 <div className="col-12 "><img src={background} className="img-fluid " alt="banner_image"></img></div>
+                 <div className="col-12 "><img src={background} className="img-fluid " alt="banner_image" id='bannerImage'></img></div>
                   
                  </section>
                  <h1 className='p-4 text-center'>About Us</h1>
