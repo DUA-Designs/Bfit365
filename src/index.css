@@ -142,11 +142,7 @@ nav{
   transition: 0.8s ease;
 }
 
-#facility>div>img.slideMe{
-  transform: translateX(0);
-  transition: 2s ease;
-
-}
+ 
  
  
  
@@ -220,6 +216,19 @@ nav{
   color: white;
 
 }
+#form input{
+  padding: 0.5rem;
+}
+#form input:focus{
+  outline: none;
+}
+#form textarea{
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid white;
+}
+ 
 
 @media screen and  (max-width:760px) {
   #studioContainer{

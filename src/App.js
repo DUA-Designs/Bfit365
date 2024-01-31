@@ -173,21 +173,17 @@ function App() {
                   <div className='row p-4 '>
                     <div className='col-lg-5 col-md-6 col-sm-12 col-xs-12 '  id='parallaxEffect'> </div>
                     <div className='col-lg-7 col-md-8 col-sm-12 col-xs-12 mx-auto bg-dark text-center text-white position-relative p-3  bottom-0' id='message'>
-                       <h2 className='p-4 'style={{color:"#ff7300",fontWeight:700}}>Send A Message</h2>
-                       <div className='row d-flex flex-wrap p-1    text-start '>
-                        <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12  my-2 '><div className='col-12 p-2 d-grid'><label>FirstName</label>
-                         <input type='text' ></input></div>
+                       <h2 className='p-4 col-12'style={{color:"#ff7300",fontWeight:700}}>Send A Message</h2>
+                       <div className='col-12 d-flex flex-wrap  text-start ' id='form'>
+                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >First Name</label><input type='text'></input></div></div>
+                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >Last Name</label><input type='text'></input></div></div>
+                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >Phone No</label><input type='text'></input></div></div>
+                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >Email</label><input type='text'></input></div></div>
+                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >Leave Us a message...</label><textarea rows={3} ></textarea></div></div>
+                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid  p-2 align-items-center'><button className='btn btn-light p-3'>Submit</button></div></div>
+
+                         
                         </div>
-                        <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12  my-2 '><div className='col-12 p-2 d-grid'><label>LastName</label>
-                         <input type='text' ></input></div></div>
-                        <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12  my-2 '><div className='col-12 p-2 d-grid'><label>Phone Number</label>
-                         <input type='text' ></input></div></div>
-                        <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12  my-2 '><div className='col-12 p-2 d-grid'><label>Email</label> 
-                         <input type='text' ></input></div></div>
-                        <div className='col-12  my-2 '><div className='col-12 p-2 d-grid'><label>Leave a message...</label>
-                         <input type='text' ></input></div></div>
-                        <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12 mx-auto d-grid my-2  d-grid'><div className='col-12 d-grid'><button className='btn btn-dark border-light'>Submit</button></div>
-                        </div></div>
                     </div>
                   </div>
                 
