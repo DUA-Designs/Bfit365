@@ -5,7 +5,7 @@ import facility2 from './images/pexels-the-lazy-artist-gallery-2247179.jpg';
 import facility3 from './images/pexels-william-choquette-1954524.jpg';
 import facility4 from './images/pexels-cleiton-silva-10343485.jpg';
 import fitnessMan from './images/full-body-portrait-athletic-shirtless-male-doing-biceps-workouts-with-dumbbells-gym-club.jpg';
-import DUA from './images/IMG_2570.jpeg';
+ 
 
 let x=1;
 function App() {
@@ -57,7 +57,18 @@ function App() {
                 document.getElementById('womenImage').classList.add("showIt");
               },500);
             }
-          
+            if(document.documentElement.scrollTop >document.getElementById("facility").offsetHeight+document.getElementById("results").offsetHeight+20 ){
+                  
+              for(let i=1;i<=4;i++){
+                if(i<3){document.querySelector(`#facility div:nth-child(${i}) img`).classList.add("showIt");}
+                else{
+                  if(document.documentElement.scrollTop >document.getElementById("facility").offsetHeight+document.getElementById("results").offsetHeight+document.querySelector("#facility img").offsetHeight +20 ){
+                    document.querySelector(`#facility div:nth-child(${i}) img`).classList.add("showIt");
+                  }
+                }
+                    
+              }
+            }
           } else {
             mybutton.style.display = "none";
             nav.classList.remove("scrollStyle");
@@ -144,10 +155,10 @@ function App() {
                 
                  
                   
-                  <div className='col-4 py-2'><img src={facility1} className='img-fluid' alt='facility_images'></img></div>
-                  <div className='col-8 py-2'><img src={facility2} className='img-fluid' alt='facility_images'></img></div>
-                  <div className='col-8 py-2'><img src={facility3} className='img-fluid' alt='facility_images'></img></div>
-                  <div className='col-4 py-2'><img src={facility4} className='img-fluid' alt='facility_images'></img></div>
+                  <div className='col-4 py-2'><img src={facility1} className='img-fluid hideIt' alt='facility_images'></img></div>
+                  <div className='col-8 py-2'><img src={facility2} className='img-fluid  hideIt' alt='facility_images'></img></div>
+                  <div className='col-8 py-2'><img src={facility3} className='img-fluid hideIt' alt='facility_images'></img></div>
+                  <div className='col-4 py-2'><img src={facility4} className='img-fluid  hideIt' alt='facility_images'></img></div>
                  </section>
 
 
@@ -163,7 +174,7 @@ function App() {
                     <div className='col-lg-5 col-md-6 col-sm-12 col-xs-12 '  id='parallaxEffect'> </div>
                     <div className='col-lg-7 col-md-8 col-sm-12 col-xs-12 mx-auto bg-dark text-center text-white position-relative p-3  bottom-0' id='message'>
                        <h2 className='p-4 'style={{color:"#ff7300",fontWeight:700}}>Send A Message</h2>
-                       <div className='row mx-auto d-flex flex-wrap text-start '>
+                       <div className='row d-flex flex-wrap p-1    text-start '>
                         <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12  my-2 '><div className='col-12 p-2 d-grid'><label>FirstName</label>
                          <input type='text' ></input></div>
                         </div>

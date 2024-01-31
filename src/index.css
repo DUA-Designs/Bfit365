@@ -141,6 +141,12 @@ nav{
   transform: translateX(0);
   transition: 0.8s ease;
 }
+
+#facility>div>img.slideMe{
+  transform: translateX(0);
+  transition: 2s ease;
+
+}
  
  
  
