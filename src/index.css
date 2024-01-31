@@ -104,12 +104,17 @@ nav{
 .styleSection{
   background-color:#ff7300 ;
   z-index: -1;
-  height: 40%;
+  height: 50%;
 }
 .mobileStyle{
  top: 0;
  right: 0;
 }
+
+.someOtherStyle{
+  height: 20%  !important;
+}
+
 .hideIt{
   opacity: 0;
   transform: translateY(30px);

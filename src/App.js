@@ -126,7 +126,7 @@ function App() {
                  </section>
                  <h1 className='p-4 text-center'>About Us</h1>
                  <section className='container d-flex flex-wrap text-center   position-relative my-5   ' id='regular'>
-                 <div className='col-6 position-absolute  styleSection  mobileStyle p-2'> </div>
+                 <div className='col-6 position-absolute  styleSection  mobileStyle someOtherStyle p-2'> </div>
                   <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12   my-3 '>
                     <p className='fs-2 hideIt' id='erin'>“Once you are exercising regularly, the hardest thing is to stop it.” </p>
                     <p className='fs-2 hideIt text-end' id='gray'>- Erin Gray</p>
