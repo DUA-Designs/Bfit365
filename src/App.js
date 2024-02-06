@@ -51,15 +51,15 @@ function App() {
             if(document.documentElement.scrollTop > 20){
               nav.classList.add("scrollStyle");
             }
-            if(document.documentElement.scrollTop>document.getElementById("sec1").offsetHeight-220){
+            if(document.documentElement.scrollTop>document.getElementById("becomeMember").offsetHeight-220){
               document.getElementById('erin').classList.add("showIt");
               document.getElementById('gray').classList.add("showIt");
               
             }
-            if(document.documentElement.scrollTop>document.getElementById("sec1").offsetHeight-90){
+            if(document.documentElement.scrollTop>document.getElementById("becomeMember").offsetHeight-90){
               document.getElementById('welcome').classList.add("showIt");
             }
-            if(document.documentElement.scrollTop>document.getElementById("sec1").offsetHeight+document.getElementById("regular").offsetHeight-250){
+            if(document.documentElement.scrollTop>document.getElementById("becomeMember").offsetHeight+document.getElementById("regular").offsetHeight-250){
               document.getElementById('womenBack').classList.add("slideMe");
               document.getElementById('results').classList.add("slideMe");
               setTimeout(()=>{
@@ -113,7 +113,7 @@ function App() {
                             </div>
                             <div className="offcanvas-body" id='dashItems'>
                               <ul>
-                                <li><a className='p-3 closeDashboard' href='#sec1'>Become member</a></li>
+                                <li><a className='p-3 closeDashboard' href='#becomeMember'>Become member</a></li>
                                 <li><a className='p-3 closeDashboard' href='#about'>About Us</a></li>
                                 <li><a className='p-3 closeDashboard' href='#workFacility'>Facility</a></li>
                                 <li><a className='p-3 closeDashboard' href='#hitUsUp'>Contact Us</a></li>
@@ -122,12 +122,12 @@ function App() {
                             </div>
                             </div>
 
-                            <div className="col-10  text-white  d-flex flex-wrap "  id='nameContainer'> <span className='col-lg-6 col-md-6 col-sm-12 ' id='gymNameContainer'><span className='gymName '> Bfit365</span></span><span className='col-lg-6 col-md-6 col-sm-12' id='studioContainer'>  <span  className='studio  '>Fitness</span><span className='studio  '> Studio</span> <i className="fa-solid fa-dumbbell fs-4 "></i></span></div>
+                            <div className="col-10  text-white  d-flex flex-wrap "  id='nameContainer'> <span className='col-lg-6 col-md-6 col-sm-12 ' id='gymNameContainer'><span className='gymName '> B-FIT365</span></span><span className='col-lg-6 col-md-6 col-sm-12' id='studioContainer'>  <span  className='studio  '>Fitness</span><span className='studio  '> Studio</span> <i className="fa-solid fa-dumbbell fs-4 "></i></span></div>
                   
                </nav>
                <main  >
               
-                 <section className="row position-relative " id='sec1'>
+                 <section className="row position-relative " id='becomeMember'>
                   <div className="col-12 position-absolute start-0 banner text-center   text-white   ">
                     <h1 id="trainHard">Train Hard. Sweat Hard.</h1>
                     <div className="col-lg-4 col-md-4 col-sm-10 col-xs-12 mx-auto my-3">
@@ -153,15 +153,15 @@ function App() {
                  
                  <section className='d-flex flex-wrap  my-3   px-2'>
                   <div className='col-lg-8 col-md-8 col-sm-12 col-xs-12 position-relative '>
-                  <div className='col-6 position-absolute top-0 start-0 styleSection pushLeft ' id='womenBack'> </div>
+                    <div className='col-6 position-absolute top-0 start-0 styleSection pushLeft ' id='womenBack'> </div>
                   
                     <div className='col-12 p-5 hideIt' id='womenImage'><img src='https://static.wixstatic.com/media/fd6edb_a1a0ee9383b442ca92e1aca0c515beab~mv2.jpg/v1/crop/x_0,y_190,w_2636,h_1616/fill/w_1164,h_713,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/GettyImages-1151770247_edited.jpg' className='img-fluid' alt="banner_image"></img></div>
                     
                   </div>
                   <div className='col-lg-4 col-md-4 col-xs-12 col-sm-12 p-2 pushRight ' id='results'>
                   
-                      <p className='fs-2'>100% results Guaranteed.</p>
-                      <p className='fs-5'>Why choose Bfit?We're more than just a gym - we're a community dedicated to helping you achieve your fitness goals, no matter how big or small. Our modern and spacious facility is equipped with top-of-the-line equipment, offering a diverse range of workout options to suit all fitness levels.</p>
+                      <p className='fs-2'>Why choose Bfit?</p>
+                      <p className='fs-5'>We're more than just a gym - we're a community dedicated to helping you achieve your fitness goals, no matter how big or small. Our modern and spacious facility is equipped with  variety of equipment, offering a diverse range of workout options to suit all fitness levels.</p>
                   </div>
                   
                  </section>
@@ -216,23 +216,24 @@ function App() {
                     <ul>
                       <li><i className="fa-solid fa-phone"></i>&nbsp; 9052255588</li>
                       <li><i className="fa-solid fa-envelope"></i>&nbsp; bfit365gym@gmail.com</li>
-                      </ul> </div>
+                      </ul>
+                  </div>
 
                </aside>
 
                <footer >
-                <section  className=' text-white   px-2' style={{background:'#262626'}} id='list'>
+                <section  className=' text-white   px-2 py-5' style={{background:'#262626'}} id='list'>
                   <div className='row p-3'>
-                    <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 text-center mx-auto my-2'><span className='gymName'> Bfit365</span>
-                     <p style={{color:"#ff7300"}} className='p-3'>Fitness Studio</p>
+                    <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 text-center mx-auto my-2'><span className='gymName'> B-FIT365</span>
+                     <p style={{color:"#ff7300"}} className='p-3'>Fitness Studio <i className="fa-solid fa-dumbbell fs-4 "></i></p>
                     </div>
                     <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 mx-auto my-2'>
                       <h4 >Features</h4>
                       <ul  >
-                        <li>Become Member</li>
-                        <li>About Us</li>
-                        <li>Facility</li>
-                        <li>Contact</li>
+                                <li><a className='p-1 closeDashboard' href='#becomeMember'>Become member</a></li>
+                                <li><a className='p-1 closeDashboard' href='#about'>About Us</a></li>
+                                <li><a className='p-1 closeDashboard' href='#workFacility'>Facility</a></li>
+                                <li><a className='p-1 closeDashboard' href='#hitUsUp'>Contact Us</a></li>
                       </ul>
                     </div>
                     <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 mx-auto my-2  '><h4>Location</h4>
