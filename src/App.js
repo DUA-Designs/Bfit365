@@ -11,6 +11,17 @@ let x=1;
 function App() {
 
   useEffect(()=>{
+    if(document.getElementById("becomeMember")){
+      document.getElementById("main").style.visibility="visible";
+      document.getElementById("nameContainer").classList.add("changeFontColor");
+      const gymName=document.querySelectorAll(".gymName");
+      console.log(gymName);
+      
+        gymName[0].style.border="5px solid white";
+        gymName[1].style.border="3px solid white";
+        
+   
+    }
    
     if(x===1){
     if(document.getElementById("bannerImage")){
@@ -122,12 +133,10 @@ function App() {
                             </div>
                             </div>
 
-                            <div className="col-10  text-white  d-flex flex-wrap "  id='nameContainer'> <span className='col-lg-6 col-md-6 col-sm-12 ' id='gymNameContainer'><span className='gymName '> B-FIT365</span></span><span className='col-lg-6 col-md-6 col-sm-12' id='studioContainer'>  <span  className='studio  '>Fitness</span><span className='studio  '> Studio</span> <i className="fa-solid fa-dumbbell fs-4 "></i></span></div>
+                            <div className="col-10    d-flex flex-wrap "  id='nameContainer'> <span className='col-lg-6 col-md-6 col-sm-12 ' id='gymNameContainer'><span className='gymName '> B-FIT365</span></span><span className='col-lg-6 col-md-6 col-sm-12' id='studioContainer'>  <span  className='studio  '>Fitness</span><span className='studio  '> Studio</span> <i className="fa-solid fa-dumbbell fs-4 "></i></span></div>
                   
                </nav>
-               <main  >
-              
-                 <section className="row position-relative " id='becomeMember'>
+               <section className="row position-relative " id='becomeMember'>
                   <div className="col-12 position-absolute start-0 banner text-center   text-white   ">
                     <h1 id="trainHard">Train Hard. Sweat Hard.</h1>
                     <div className="col-lg-4 col-md-4 col-sm-10 col-xs-12 mx-auto my-3">
@@ -137,7 +146,9 @@ function App() {
                  <div className="col-12 "><img src={background} className="img-fluid " alt="banner_image" id='bannerImage'></img></div>
                   
                  </section>
-                 <h1 className='p-4 text-center' id='about'>About Us</h1>
+
+               <main  id='main'>
+                <h1 className='p-4 text-center' id='about'>About Us</h1>
                  <section className='container d-flex flex-wrap text-center   position-relative my-5   ' id='regular'>
                  <div className='col-6 position-absolute  styleSection  mobileStyle someOtherStyle p-2'> </div>
                   <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12   my-3 p-2'>
@@ -258,7 +269,7 @@ function App() {
                 <button   className="btn btn-floating z-2" id="btn-back-to-top"><i className="fas fa-arrow-up"></i></button>
                 <section className='p-3' style={{background:"#ff7300"}} id='powered'>
                   <p className='text-center p-2'>
-                  &#169; 2024 By Bfit365. Powered by <a href='https://dua-designs.github.io/react-portfolio/'>Dua_Designs </a>.
+                  &#169; 2024 By Bfit365. Powered by <a href='https://dua-designs.github.io/react-portfolio/'>Dua_Designs </a>
                   </p>
                 </section>
 

@@ -37,15 +37,19 @@ code {
 }
 .gymName{
   font-size: 25px;
-  color: white;
+  
   padding: 0 1rem;
-  border: 5px solid white;
+  border: 5px solid black;
 }
 nav.scrollStyle{
  background-color: rgb(61, 61, 61);
  padding: 0.2rem;
  
 }
+main{
+  visibility:hidden;
+}
+ 
 nav{
  
  width: 100%;
@@ -57,6 +61,14 @@ nav{
   text-wrap: nowrap;
    
 }
+#nameContainer{
+  color: black;
+}
+#nameContainer.changeFontColor{
+  color: white;
+}
+
+
  
 .studio{
   font-size: 24px;
@@ -251,6 +263,7 @@ nav{
   }
   #gymNameContainer{
     width: 100%;
+    color: white;
   }
    
   #trainHard{
