@@ -1,4 +1,5 @@
  import {useEffect} from 'react'
+ import emailjs from '@emailjs/browser';
  import background from './images/background.jpg';
  import facility1 from './images/pexels-cesar-galeão-3289711.jpg';
 import facility2 from './images/pexels-the-lazy-artist-gallery-2247179.jpg';
@@ -9,14 +10,67 @@ import fitnessMan from './images/full-body-portrait-athletic-shirtless-male-doin
 
 let x=1;
 function App() {
+  
+ async function sendEmail(e){
+    e.preventDefault();
+ 
+
+  
+    let firstName=document.getElementById("firstName") ;
+    let lastName=document.getElementById("lastName") ;
+    let PhoneNo=document.getElementById("PhoneNo");
+    let email=document.getElementById("email");
+    let textMessage=document.getElementById("textMessage") ;
+    let submitMessage=document.getElementById("submitMessage");
+
+    if(!firstName.value || !lastName.value || !PhoneNo.value || !email.value || !textMessage.value){
+ 
+      return "";
+    }
+          submitMessage.innerHTML=`<i class="gg-spinner  "></i>`;
+
+     var templateParams = {
+      user: `${firstName.value}(FirstName)  ${lastName.value}(LastName)`,
+      emial_id: email.value,
+      to_name:"Santhosh",
+      PhoneNo:PhoneNo.value ,
+      message:textMessage.value
+    };
+   let success=0;
+   
+    emailjs.init("I4hRM78EXk7LdR9pC");
+    emailjs.send('service_i12y271', 'template_beywuwg',templateParams,"I4hRM78EXk7LdR9pC" ).then(function(response) {
+         alert('We got your message!');
+         success=1;
+         
+      }, function(error) {
+         alert('FAILED to collect your information...', error);
+      });  
+    if(success===1){
+      await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),2000));
+      
+      firstName.value="";
+      lastName.value="";
+      PhoneNo.value="";
+      email.value="";
+      textMessage.value="";
+
+      submitMessage.innerHTML=`Submit`;
+    }
+    else{
+      submitMessage.innerHTML=`Submit`;
+
+    }
+     
+     
+      
+  }
 
   useEffect(()=>{
     if(document.getElementById("becomeMember")){
       document.getElementById("main").style.visibility="visible";
       document.getElementById("nameContainer").classList.add("changeFontColor");
       const gymName=document.querySelectorAll(".gymName");
-      console.log(gymName);
-      
         gymName[0].style.border="5px solid white";
         gymName[1].style.border="3px solid white";
         
@@ -201,16 +255,16 @@ function App() {
                     <div className='col-lg-5 col-md-6 col-sm-12 col-xs-12 '  id='parallaxEffect'> </div>
                     <div className='col-lg-7 col-md-8 col-sm-12 col-xs-12 mx-auto bg-dark text-center text-white position-relative p-3  bottom-0' id='message'>
                        <h2 className='p-4 col-12'style={{color:"#ff7300",fontWeight:700}}>Send A Message</h2>
-                       <div className='col-12 d-flex flex-wrap  text-start ' id='form'>
-                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >First Name</label><input type='text'></input></div></div>
-                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >Last Name</label><input type='text'></input></div></div>
-                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >Phone No</label><input type='text'></input></div></div>
-                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >Email</label><input type='text'></input></div></div>
-                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >Leave Us a message...</label><textarea rows={3} ></textarea></div></div>
-                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid  p-2 align-items-center'><button className='btn btn-light p-3'>Submit</button></div></div>
+                       <form className='col-12 d-flex flex-wrap  text-start ' id='form' onSubmit={(event)=>sendEmail(event)}>
+                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >First Name</label><input type='text' id='firstName' required></input></div></div>
+                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >Last Name</label><input type='text' id='lastName' required></input></div></div>
+                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >Phone No</label><input type='text' id='PhoneNo' required></input></div></div>
+                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >Email</label><input type='email' id='email' required></input></div></div>
+                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >Leave Us a message...</label><textarea rows={3} id='textMessage'  required></textarea></div></div>
+                               <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid  p-2 align-items-center'><button className='btn btn-light p-3 ' type='submit'  id='submitMessage'>Submit</button></div></div>
 
                          
-                        </div>
+                        </form>
                     </div>
                   </div>
                 
