@@ -293,9 +293,9 @@ function App() {
                     <h3 className=' text-center'><i className="fa-solid fa-circle-question"></i></h3>
                     <h4 className=' text-center'>Need Help Reaching Us? </h4>
                     <p className=' text-center'>Contact on </p>
-                    <ul>
-                      <li><i className="fa-solid fa-phone"></i>&nbsp; 9052255588</li>
-                      <li><i className="fa-solid fa-envelope"></i>&nbsp; bfit365gym@gmail.com</li>
+                    <ul className=' '>
+                      <li className='text-start'><i className="fa-solid fa-phone "></i>&nbsp; 9052255588</li>
+                      <li className='text-start'><i className="fa-solid fa-envelope "></i>&nbsp; bfit365gym@gmail.com</li>
                       </ul>
                   </div>
 
