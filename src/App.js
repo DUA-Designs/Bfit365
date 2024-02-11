@@ -310,7 +310,7 @@ function App() {
                     </div>
                     <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 mx-auto my-2'>
                       <h4 >Features</h4>
-                      <ul  >
+                      <ul  id='featuresLink'>
                                 <li><a className='p-1 closeDashboard' href='#becomeMember'>Become member</a></li>
                                 <li><a className='p-1 closeDashboard' href='#about'>About Us</a></li>
                                 <li><a className='p-1 closeDashboard' href='#workFacility'>Facility</a></li>
