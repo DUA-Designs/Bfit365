@@ -6,6 +6,7 @@ import facility2 from './images/pexels-the-lazy-artist-gallery-2247179.jpg';
 import facility3 from './images/pexels-william-choquette-1954524.jpg';
 import facility4 from './images/pexels-cleiton-silva-10343485.jpg';
 import fitnessMan from './images/full-body-portrait-athletic-shirtless-male-doing-biceps-workouts-with-dumbbells-gym-club.jpg';
+import DD from './images/DD.png';
  
 
 let x=1;
@@ -209,7 +210,7 @@ function App() {
                   <div className="col-12 position-absolute start-0 banner text-center   text-white   ">
                     <h1 id="trainHard">Train Hard. Sweat Hard.</h1>
                     <div className="col-lg-4 col-md-4 col-sm-10 col-xs-12 mx-auto my-3">
-                      <button className=" btn   p-2 my-2" id='member'>Become a member</button>
+                      <a href='#messageContainer'><button className=" btn   p-2 my-2" id='member' >Become a member</button></a>
                     </div>
                   </div>
                  <div className="col-12 "><img src={background} className="img-fluid " alt="banner_image" id='bannerImage'></img></div>
@@ -227,7 +228,7 @@ function App() {
                   </div>
                   <div className='col-lg-6 col-md-6 col-sm-12 col-xs-12 p-4 '><img src={fitnessMan} alt='fitness_man' className='img-fluid'></img></div>
                   <div className="col-lg-4 col-md-4 col-sm-10 col-xs-12 mx-auto my-3">
-                      <button className="btn btn-dark border p-2">Start Sweating</button>
+                     <a href='#messageContainer'>  <button className="btn btn-dark border p-2">Start Sweating</button></a>
                     </div>
                  </section>
                  
@@ -266,7 +267,7 @@ function App() {
                   <div className='row text-center my-5 py-3'>
                     <h1>Hit Us Up Anytime</h1>
                   </div>
-                  <div className='row p-4  '>
+                  <div className='row p-4  ' id='messageContainer'>
                     <div className='col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-success'  id='parallaxEffect'> </div>
                     <div className='col-lg-8 col-md-8 col-sm-12 col-xs-12  bg-dark text-center text-white  ' id='message'>
                        <h2 className='p-4 col-12'style={{color:"#ff7300",fontWeight:700}}>Send A Message</h2>
@@ -336,9 +337,9 @@ function App() {
                      
                 </section>
                 <button   className="btn btn-floating z-2" id="btn-back-to-top"><i className="fas fa-arrow-up"></i></button>
-                <section className='p-3' style={{background:"#ff7300"}} id='powered'>
+                <section className='p-4' style={{background:"#ff7300"}} id='powered'>
                   <p className='text-center p-2'>
-                  &#169; 2024 By Bfit365. Powered by <a href='https://dua-designs.github.io/react-portfolio/'>Dua_Designs </a>
+                  &#169; 2024 B-fit365. Powered by <a href='https://dua-designs.github.io/react-portfolio/'><img src={DD} alt='Creator' width={50} height={50}></img></a>
                   </p>
                 </section>
 
