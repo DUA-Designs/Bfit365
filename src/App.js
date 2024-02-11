@@ -1,4 +1,4 @@
- import {useEffect} from 'react'
+ import {useEffect, useState} from 'react'
  import emailjs from '@emailjs/browser';
  import background from './images/background.jpg';
  import facility1 from './images/pexels-cesar-galeão-3289711.jpg';
@@ -10,6 +10,7 @@ import fitnessMan from './images/full-body-portrait-athletic-shirtless-male-doin
 
 let x=1;
 function App() {
+  const [emailSuccess,setEmailSuccess]=useState(0);
   
  async function sendEmail(e){
     e.preventDefault();
@@ -36,29 +37,39 @@ function App() {
       PhoneNo:PhoneNo.value ,
       message:textMessage.value
     };
-   let success=0;
+  
    
     emailjs.init("I4hRM78EXk7LdR9pC");
     emailjs.send('service_i12y271', 'template_beywuwg',templateParams,"I4hRM78EXk7LdR9pC" ).then(function(response) {
-         alert('We got your message!');
-         success=1;
+         
+         setEmailSuccess(1);
          
       }, function(error) {
-         alert('FAILED to collect your information...', error);
+         
       });  
-    if(success===1){
-      await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),2000));
+      await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),1000));
+      
+    if(emailSuccess===1){
+      await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),1000));
       
       firstName.value="";
       lastName.value="";
       PhoneNo.value="";
       email.value="";
       textMessage.value="";
+      submitMessage.innerHTML=`<i class="fa-solid fa-check text-center fs-3"></i>`;
+      await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),1000));
 
       submitMessage.innerHTML=`Submit`;
+      setEmailSuccess(0);
+      alert("We got your details!");
     }
     else{
+
+   submitMessage.innerHTML=`<i class="fa-solid fa-xmark text-center fs-3"></i>`;
+       await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),1000));
       submitMessage.innerHTML=`Submit`;
+      alert("Failed to get your details...");
 
     }
      
@@ -68,13 +79,13 @@ function App() {
 
   useEffect(()=>{
     if(document.getElementById("becomeMember").childNodes.length){
-      document.getElementById("main").style.visibility="visible";
+      
       document.getElementById("nameContainer").classList.add("changeFontColor");
       const gymName=document.querySelectorAll(".gymName");
         gymName[0].style.border="5px solid white";
         gymName[1].style.border="3px solid white";
         
-   
+     
     }
    
     if(x===1){
@@ -116,7 +127,11 @@ function App() {
             if(document.documentElement.scrollTop > 20){
               nav.classList.add("scrollStyle");
             }
+            if(document.documentElement.scrollTop>document.getElementById("becomeMember").offsetHeight-420){
+              document.getElementById("main").classList.add("makeVisible");
+            }
             if(document.documentElement.scrollTop>document.getElementById("becomeMember").offsetHeight-220){
+           
               document.getElementById('erin').classList.add("showIt");
               document.getElementById('gray').classList.add("showIt");
               

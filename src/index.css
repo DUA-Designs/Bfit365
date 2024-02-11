@@ -47,7 +47,13 @@ nav.scrollStyle{
  
 }
 main{
-  visibility:hidden;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.makeVisible{
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.3s ease;
 }
  
 nav{
