@@ -67,7 +67,7 @@ function App() {
   }
 
   useEffect(()=>{
-    if(document.getElementById("becomeMember")){
+    if(document.getElementById("becomeMember").childNodes.length){
       document.getElementById("main").style.visibility="visible";
       document.getElementById("nameContainer").classList.add("changeFontColor");
       const gymName=document.querySelectorAll(".gymName");
@@ -251,11 +251,11 @@ function App() {
                   <div className='row text-center my-5 py-3'>
                     <h1>Hit Us Up Anytime</h1>
                   </div>
-                  <div className='row p-4 '>
-                    <div className='col-lg-5 col-md-6 col-sm-12 col-xs-12 '  id='parallaxEffect'> </div>
-                    <div className='col-lg-7 col-md-8 col-sm-12 col-xs-12 mx-auto bg-dark text-center text-white position-relative p-3  bottom-0' id='message'>
+                  <div className='row p-4  '>
+                    <div className='col-lg-4 col-md-4 col-sm-12 col-xs-12 bg-success'  id='parallaxEffect'> </div>
+                    <div className='col-lg-8 col-md-8 col-sm-12 col-xs-12  bg-dark text-center text-white  ' id='message'>
                        <h2 className='p-4 col-12'style={{color:"#ff7300",fontWeight:700}}>Send A Message</h2>
-                       <form className='col-12 d-flex flex-wrap  text-start ' id='form' onSubmit={(event)=>sendEmail(event)}>
+                       <form className='col-12 d-flex flex-wrap  text-start py-4' id='form'  onSubmit={(event)=>sendEmail(event)}>
                                <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >First Name</label><input type='text' id='firstName' required></input></div></div>
                                <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >Last Name</label><input type='text' id='lastName' required></input></div></div>
                                <div className='col-lg-6 col-md-6 col-12  my-2'> <div className='d-grid p-2'><label >Phone No</label><input type='text' id='PhoneNo' required></input></div></div>

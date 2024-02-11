@@ -218,8 +218,11 @@ nav{
 #parallaxEffect{
   background: url('./images/IMG_2570.jpeg');
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size:contain;
+  background-size: contain;
+  background-attachment: fixed ;
+
+  
+ 
  
    
 }
@@ -343,12 +346,7 @@ nav{
 #btn-back-to-top i{
     font-size: 1rem;
 }
-#message{
-  right: 0;
  
- 
-
-}
 nav {
   background-color: rgb(61, 61, 61);
   padding: 0.2rem;
