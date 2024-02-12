@@ -12,7 +12,7 @@ import DD from './images/DD.png';
 let x=1;
 function App() {
   const [emailSuccess,setEmailSuccess]=useState(0);
-  
+ 
  async function sendEmail(e){
     e.preventDefault();
  
@@ -48,10 +48,10 @@ function App() {
       }, function(error) {
          
       });  
-      await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),1000));
+      await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),3000));
       
     if(emailSuccess===1){
-      await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),1000));
+      await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),500));
       
       firstName.value="";
       lastName.value="";
@@ -62,8 +62,9 @@ function App() {
       await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),1000));
 
       submitMessage.innerHTML=`Submit`;
-      setEmailSuccess(0);
+      
       alert("We got your details!");
+      setEmailSuccess(0);
     }
     else{
 
@@ -77,6 +78,68 @@ function App() {
      
       
   }
+  async  function scrollFunction() {
+    let nav=document.getElementById("nav");
+    let mybutton = document.getElementById("btn-back-to-top");
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "flex";
+     
+        if(document.documentElement.scrollTop > 20){
+          nav.classList.add("scrollStyle");
+        }
+        
+        if( document.documentElement.scrollTop>document.getElementById("becomeMember").offsetHeight-420 ){
+          document.getElementById("main").classList.add("makeVisible");
+        
+        //await new Promise(resolve=>setTimeout(()=>resolve("this is for loading time"),1000));
+       
+        
+       
+        
+       
+            
+          
+         
+        }
+        if(document.documentElement.scrollTop>document.getElementById("becomeMember").offsetHeight-220){
+   
+           
+       
+          document.getElementById('erin').classList.add("showIt");
+          document.getElementById('gray').classList.add("showIt");
+          
+        }
+        if(document.documentElement.scrollTop>document.getElementById("becomeMember").offsetHeight-90){
+          document.getElementById('welcome').classList.add("showIt");
+        }
+        if(document.documentElement.scrollTop>document.getElementById("becomeMember").offsetHeight+document.getElementById("regular").offsetHeight-250){
+          document.getElementById('womenBack').classList.add("slideMe");
+          document.getElementById('results').classList.add("slideMe");
+          setTimeout(()=>{
+            document.getElementById('womenImage').classList.add("showIt");
+          },500);
+        }
+        if(document.documentElement.scrollTop >document.getElementById("facility").offsetHeight+document.getElementById("results").offsetHeight+20 ){
+              
+          for(let i=1;i<=4;i++){
+            if(i<3){document.querySelector(`#facility div:nth-child(${i}) img`).classList.add("showIt");}
+            else{
+              if(document.documentElement.scrollTop >document.getElementById("facility").offsetHeight+document.getElementById("results").offsetHeight+document.querySelector("#facility img").offsetHeight +20 ){
+                document.querySelector(`#facility div:nth-child(${i}) img`).classList.add("showIt");
+              }
+            }
+                
+          }
+        }
+      } else {
+        mybutton.style.display = "none";
+        nav.classList.remove("scrollStyle");
+        
+      }
+    }
 
   useEffect(()=>{
     if(document.getElementById("becomeMember").childNodes.length){
@@ -93,12 +156,12 @@ function App() {
     if(document.getElementById("bannerImage")){
       setTimeout(()=>{
         document.getElementById("trainHard").classList.add("slideRight");
-      },2000);
+      },2500);
       
       setTimeout(()=>{
       
        document.getElementById("member").classList.add("showIt");
-      },3000);
+      },3500);
     }
  
 
@@ -115,56 +178,9 @@ function App() {
 
 
     let mybutton = document.getElementById("btn-back-to-top");
-    let nav=document.getElementById("nav");
 
-        function scrollFunction() {
-       
-          if (
-            document.body.scrollTop > 20 ||
-            document.documentElement.scrollTop > 20
-          ) {
-            mybutton.style.display = "flex";
-         
-            if(document.documentElement.scrollTop > 20){
-              nav.classList.add("scrollStyle");
-            }
-            if(document.documentElement.scrollTop>document.getElementById("becomeMember").offsetHeight-420){
-              document.getElementById("main").classList.add("makeVisible");
-            }
-            if(document.documentElement.scrollTop>document.getElementById("becomeMember").offsetHeight-220){
-           
-              document.getElementById('erin').classList.add("showIt");
-              document.getElementById('gray').classList.add("showIt");
-              
-            }
-            if(document.documentElement.scrollTop>document.getElementById("becomeMember").offsetHeight-90){
-              document.getElementById('welcome').classList.add("showIt");
-            }
-            if(document.documentElement.scrollTop>document.getElementById("becomeMember").offsetHeight+document.getElementById("regular").offsetHeight-250){
-              document.getElementById('womenBack').classList.add("slideMe");
-              document.getElementById('results').classList.add("slideMe");
-              setTimeout(()=>{
-                document.getElementById('womenImage').classList.add("showIt");
-              },500);
-            }
-            if(document.documentElement.scrollTop >document.getElementById("facility").offsetHeight+document.getElementById("results").offsetHeight+20 ){
-                  
-              for(let i=1;i<=4;i++){
-                if(i<3){document.querySelector(`#facility div:nth-child(${i}) img`).classList.add("showIt");}
-                else{
-                  if(document.documentElement.scrollTop >document.getElementById("facility").offsetHeight+document.getElementById("results").offsetHeight+document.querySelector("#facility img").offsetHeight +20 ){
-                    document.querySelector(`#facility div:nth-child(${i}) img`).classList.add("showIt");
-                  }
-                }
-                    
-              }
-            }
-          } else {
-            mybutton.style.display = "none";
-            nav.classList.remove("scrollStyle");
-            
-          }
-        }
+
+    
         // When the user clicks on the button, scroll to the top of the document
         mybutton.addEventListener("click", backToTop);
         
