@@ -11,7 +11,7 @@ import DD from './images/DD.png';
 
 let x=1;
 function App() {
-  const [emailSuccess,setEmailSuccess]=useState(0);
+ 
  
  async function sendEmail(e){
     e.preventDefault();
@@ -41,16 +41,12 @@ function App() {
   
    
     emailjs.init("I4hRM78EXk7LdR9pC");
-    emailjs.send('service_i12y271', 'template_beywuwg',templateParams,"I4hRM78EXk7LdR9pC" ).then(function(response) {
-         
-         setEmailSuccess(1);
-         
-      }, function(error) {
-         
-      });  
-      await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),3000));
+    let response=await emailjs.send('service_i12y271', 'template_beywuwg',templateParams,"I4hRM78EXk7LdR9pC" );
+ 
+      await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),2000));
       
-    if(emailSuccess===1){
+      
+    if(response.status===200){
       await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),500));
       
       firstName.value="";
@@ -64,7 +60,7 @@ function App() {
       submitMessage.innerHTML=`Submit`;
       
       alert("We got your details!");
-      setEmailSuccess(0);
+      
     }
     else{
 
@@ -304,7 +300,7 @@ function App() {
                 </section>
 
                <aside className='row   my-2   px-3' id='area'>
-                 <div className='col-lg-9 col-md-8 col-sm-12 col-xs-12 my-2'><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.254938191809!2d78.50558127368959!3d17.399548902457603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99bb24f7ded9%3A0xb6886ea32ec7f661!2sB-FIT365%20FITTNESS%20STUDIO!5e0!3m2!1sen!2sin!4v1706455960836!5m2!1sen!2sin"  title='Bfit365_Location'    allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe></div>
+                 <div className='col-lg-9 col-md-8 col-sm-12 col-xs-12 my-2'><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.254938191809!2d78.50558127368959!3d17.399548902457603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99bb24f7ded9%3A0xb6886ea32ec7f661!2sB-FIT365%20FITTNESS%20STUDIO!5e0!3m2!1sen!2sin!4v1706455960836!5m2!1sen!2sin"  title='Bfit365_Location'    allowFullScreen="" loading="eager" referrerPolicy="no-referrer-when-downgrade"></iframe></div>
                   <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 shadow rounded my-2'>
 
                     <h3 className=' text-center'><i className="fa-solid fa-circle-question"></i></h3>
